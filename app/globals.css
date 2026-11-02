@@ -1,0 +1,7 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { background: #FBF7EF; color: #3A372F; font-family: var(--f-serif), Georgia, serif; }
+.gold-text { background: linear-gradient(120deg,#8C6A22,#D8BC74 45%,#A98233); -webkit-background-clip: text; color: transparent; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; } }
+@keyframes fall { from { transform: translateY(-10vh) rotate(0); } to { transform: translateY(110vh) rotate(360deg); } }
+.petal { position: fixed; top: 0; z-index: 5; pointer-events: none; border-radius: 80% 0 80% 0; animation: fall linear infinite; opacity: .55; }
